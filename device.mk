@@ -24,13 +24,8 @@ PRODUCT_PACKAGES += \
     android.hardware.boot@1.2-mtkimpl \
     android.hardware.boot@1.2-mtkimpl.recovery
     
-PRODUCT_PACKAGES_DEBUG += \
-    bootctrl \
-    update_engine_client
-
 PRODUCT_PACKAGES += \
-    bootctrl.mt6765 \
-    bootctrl.mt6765.recovery
+    bootctrl.mt6765
 
 # PRODUCT_STATIC_BOOT_CONTROL_HAL := \
 #     bootctrl.mt6765 \
@@ -59,10 +54,9 @@ PRODUCT_SHIPPING_API_LEVEL := 30
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
 
 # Fastbootd
-PRODUCT_PACKAGES += \
-    android.hardware.fastboot@1.0-impl-mock \
-    android.hardware.fastboot@1.0-impl-mock.recovery \
-    fastbootd
+# PRODUCT_PACKAGES += \
+#     android.hardware.fastboot@1.0-impl-mock \
+#     fastbootd
 
 # Additional Libraries
 # TARGET_RECOVERY_DEVICE_MODULES += \
@@ -75,9 +69,8 @@ PRODUCT_PACKAGES += \
 #     $(TARGET_OUT_SHARED_LIBRARIES)/libkeymaster41.so \
 #     $(TARGET_OUT_SHARED_LIBRARIES)/libpuresoftkeymasterdevice.so
 
-# Crypto FBE
-PRODUCT_PACKAGES += \
-    twrpfbe
+# PRODUCT_PACKAGES += \
+#     twrpfbe
 
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.crypto.dm_default_key.options_format.version=2
