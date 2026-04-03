@@ -70,8 +70,6 @@ TARGET_PREBUILT_DTB := $(DEVICE_PATH)/prebuilt/dtb.img
 # Metadata
 BOARD_USES_METADATA_PARTITION := true
 
-
-
 # Partitions
 BOARD_FLASH_BLOCK_SIZE := 131072 # (BOARD_KERNEL_PAGESIZE * 64)
 BOARD_BOOTIMAGE_PARTITION_SIZE := 33554432
@@ -148,6 +146,9 @@ TW_DEFAULT_BRIGHTNESS := 1200
 
 # This device does not support fastboot boot, do *NOT* remove!
 TW_NO_FASTBOOT_BOOT := true
+
+# USB
+TW_EXCLUDE_DEFAULT_USB_INIT := true
 
 # Debug
 TWRP_INCLUDE_LOGCAT := true
